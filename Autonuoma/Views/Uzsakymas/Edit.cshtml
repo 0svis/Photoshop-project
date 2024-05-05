@@ -1,0 +1,76 @@
+﻿@model Org.Ktu.Isk.P175B602.Autonuoma.Models.Uzsakymas.UzsakymasCE
+
+@* this will also be used as page title in main layout *@
+@{ ViewData["title"] = "Užsakymo redagavimas"; }
+
+@* content header *@
+<div class="main-content-header">
+	<span class="title">@ViewData["title"]</span>
+	<span class="actions">
+		<a 
+			href="@Url.Action("Index")" 
+			class="btn btn-outline-primary btn-sm"
+		>
+			<i class="fa-solid fa-angles-left"></i> Atgal į sarašą
+		</a>
+	</span>
+</div>
+
+@* content itself *@
+<div class="main-content-ced">
+@using( Html.BeginForm(FormMethod.Post, new { @class="entity-ce" }) )
+{
+	@Html.AntiForgeryToken()
+
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	
+	<fieldset>
+		<div class="form-group">
+			@Html.LabelFor(m => m.Uzsak.ID)
+				@Html.EditorFor(m => m.Uzsak.ID, new { htmlAttributes = new { @readonly = "readonly" } })
+			@Html.ValidationMessageFor(m => m.Uzsak.ID, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Uzsak.Kaina)
+			@Html.EditorFor(m => m.Uzsak.Kaina)
+			@Html.ValidationMessageFor(m => m.Uzsak.Kaina, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Uzsak.Data)
+			@Html.TextBoxFor(m => m.Uzsak.Data, "{0:yyyy-MM-dd}", new { @class = "form-control date-picker"})
+			@Html.ValidationMessageFor(m => m.Uzsak.Data, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Uzsak.FkDarbuotojas)
+			@Html.DropDownListFor(m => m.Uzsak.FkDarbuotojas, Model.Lists.Darbuotojai, (string)ViewData["none-chosen"])
+			@Html.ValidationMessageFor(m => m.Uzsak.FkDarbuotojas, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Uzsak.FkPirkejas)
+			@Html.DropDownListFor(m => m.Uzsak.FkPirkejas, Model.Lists.Pirkejai, (string)ViewData["none-chosen"])
+			@Html.ValidationMessageFor(m => m.Uzsak.FkPirkejas, "")
+		</div>
+	</fieldset>
+
+	<div class="container-fluid d-flex d-row justify-content-end">
+		<button name="save" value="1" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Išsaugoti</button>
+	</div>
+}
+</div>
+
+@* content footer *@
+<div class="main-content-footer">
+	<span class="title"></span>
+	<span class="actions">
+		<a 
+			href="@Url.Action("Index")" 
+			class="btn btn-outline-primary btn-sm"
+		>
+			<i class="fa-solid fa-angles-left"></i> Atgal į sarašą
+		</a>
+	</span>
+</div>
