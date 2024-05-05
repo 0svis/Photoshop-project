@@ -25,7 +25,6 @@ public class Pirkejas
 	public string Pavarde { get; set; }
 
 	[DisplayName("Telefono numeris")]
-	[Phone]
 	[Required]
 	public double Telefono_numeris { get; set; }
 

@@ -17,6 +17,9 @@
 		<thead>
 			<tr>
 				<th>
+					@Html.DisplayNameFor(model => model.Tipas)
+				</th>
+				<th>
 					@Html.DisplayNameFor(model => model.Pavadinimas)
 				</th>
 				<th>
@@ -37,6 +40,9 @@
 		<tbody>
 			@foreach (var item in Model) {
 			<tr>
+				<td>
+					@Html.DisplayFor(model => item.Tipas)
+				</td>
 				<td>
 					@Html.DisplayFor(model => item.Pavadinimas)
 				</td>

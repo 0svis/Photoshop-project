@@ -26,9 +26,9 @@
 
 	<fieldset>
 		<div class="form-group">
-			@Html.LabelFor(m => m.ID)
-			@Html.EditorFor(m => m.ID, new { htmlAttributes = new { @readonly = "readonly" } })
-			@Html.ValidationMessageFor(m => m.ID, "")
+			@Html.LabelFor(m => m.Id)
+			@Html.EditorFor(m => m.Id, new { htmlAttributes = new { @readonly = "readonly" } })
+			@Html.ValidationMessageFor(m => m.Id, "")
 		</div>
 
 		<div class="form-group">
@@ -44,15 +44,15 @@
 		</div>
 
 		<div class="form-group">
-			@Html.LabelFor(m => m.Telefonas)
-			@Html.EditorFor(m => m.Telefonas)
-			@Html.ValidationMessageFor(m => m.Telefonas, "")
+			@Html.LabelFor(m => m.Telefono_numeris)
+			@Html.EditorFor(m => m.Telefono_numeris)
+			@Html.ValidationMessageFor(m => m.Telefono_numeris, "")
 		</div>
 
 		<div class="form-group">
-			@Html.LabelFor(m => m.Epastas)
-			@Html.EditorFor(m => m.Epastas)
-			@Html.ValidationMessageFor(m => m.Epastas, "")
+			@Html.LabelFor(m => m.El_Pasto_Adresas)
+			@Html.EditorFor(m => m.El_Pasto_Adresas)
+			@Html.ValidationMessageFor(m => m.El_Pasto_Adresas, "")
 		</div>
 
 		<div class="form-group">
@@ -65,6 +65,12 @@
 			@Html.LabelFor(m => m.Adresas)
 			@Html.EditorFor(m => m.Adresas)
 			@Html.ValidationMessageFor(m => m.Adresas, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Pasto_Kodas)
+			@Html.EditorFor(m => m.Pasto_Kodas)
+			@Html.ValidationMessageFor(m => m.Pasto_Kodas, "")
 		</div>
 	</fieldset>
 

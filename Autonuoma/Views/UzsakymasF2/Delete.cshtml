@@ -26,8 +26,8 @@
 		<legend class="confirm-msg">Ar tikrai norite šalinti šį užsakymą?</legend>
 
 		<dl>
-			<dt>@Html.DisplayNameFor(m => m.Uzsakymas.ID)</dt>
-			<dd>@Html.DisplayFor(m => m.Uzsakymas.ID)</dd>
+			<dt>@Html.DisplayNameFor(m => m.Uzsakymas.Id)</dt>
+			<dd>@Html.DisplayFor(m => m.Uzsakymas.Id)</dd>
 
 			<dt>@Html.DisplayNameFor(m => m.Uzsakymas.Data)</dt>
 			<dd>@String.Format("{0:yyyy-MM-dd}", Model.Uzsakymas.Data)</dd>
@@ -47,7 +47,7 @@
 		{
 			<div class="buttons">
 				<button
-					formaction="@Url.Action("DeleteConfirm", new {id = Model.Uzsakymas.ID})"
+					formaction="@Url.Action("DeleteConfirm", new {id = Model.Uzsakymas.Id})"
 					class="btn btn-danger"
 					style="white-space: nowrap;"
 				><i class="fa-solid fa-trash"></i> Šalinti</button>

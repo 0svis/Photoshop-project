@@ -21,7 +21,6 @@ public class ParduotuveRepo
 				t.Pavadinimas = dre.From<string>("Pavadinimas");
 				t.Miestas = dre.From<string>("Miestas");
 				t.Adresas = dre.From<string>("Adresas");
-				t.Pasto_kodas = dre.From<string>("Pasto kodas");
 				t.Darbuotoju_skaicius = dre.From<int>("Darbuotoju_skaicius");
 				t.Id = dre.From<int>("id_Parduotuve");
 				t.fkSandelys = dre.From<int>("fk_Sandelysid_Sandelys");

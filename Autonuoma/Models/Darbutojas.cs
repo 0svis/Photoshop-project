@@ -11,22 +11,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 public class Darbutojas
 {
 	[DisplayName("ID")]
-	[MaxLength(10)]
 	[Required]
 	public int ID { get; set; }
 
 	[DisplayName("Vardas")]
-	[MaxLength(20)]
 	[Required]
 	public string Vardas { get; set; }
 
 	[DisplayName("Pavardė")]
-	[MaxLength(20)]
 	[Required]
 	public string Pavarde { get; set; }
 
     [DisplayName("Telefono numeris")]
-    [Phone]
     [Required]
     public double Telefono_numeris { get; set; }
 
@@ -36,12 +32,10 @@ public class Darbutojas
     public string El_Pasto_Adresas { get; set; }
 
 	[DisplayName("Pareigos")]
-	[MaxLength(15)]
 	[Required]
 	public string Pareigos { get; set; }
 
 	[DisplayName("Asmens kodas")]
-	[MaxLength(11)]
 	[Required]
 	public double Asmens_Kodas { get; set; }
 
@@ -53,22 +47,18 @@ public class Darbutojas
 public class DarbutojasL
 {
     [DisplayName("ID")]
-    [MaxLength(10)]
     [Required]
     public int ID { get; set; }
 
     [DisplayName("Vardas")]
-    [MaxLength(20)]
     [Required]
     public string Vardas { get; set; }
 
     [DisplayName("Pavardė")]
-    [MaxLength(20)]
     [Required]
     public string Pavarde { get; set; }
 
     [DisplayName("Telefono numeris")]
-    [Phone]
     [Required]
     public double Telefono_numeris { get; set; }
 
@@ -78,12 +68,10 @@ public class DarbutojasL
     public string El_Pasto_Adresas { get; set; }
 
     [DisplayName("Pareigos")]
-    [MaxLength(15)]
     [Required]
     public string Pareigos { get; set; }
 
     [DisplayName("Asmens kodas")]
-    [MaxLength(11)]
     [Required]
     public double Asmens_Kodas { get; set; }
 
@@ -97,22 +85,18 @@ public class DarbutojasCE
     public class DarbutojasM
     {
         [DisplayName("ID")]
-        [MaxLength(10)]
         [Required]
         public int ID { get; set; }
 
         [DisplayName("Vardas")]
-        [MaxLength(20)]
         [Required]
         public string Vardas { get; set; }
 
         [DisplayName("Pavardė")]
-        [MaxLength(20)]
         [Required]
         public string Pavarde { get; set; }
 
         [DisplayName("Telefono numeris")]
-        [Phone]
         [Required]
         public double Telefono_numeris { get; set; }
 
@@ -122,12 +106,10 @@ public class DarbutojasCE
         public string El_Pasto_Adresas { get; set; }
 
         [DisplayName("Pareigos")]
-        [MaxLength(15)]
         [Required]
         public string Pareigos { get; set; }
 
         [DisplayName("Asmens kodas")]
-        [MaxLength(11)]
         [Required]
         public double Asmens_Kodas { get; set; }
 

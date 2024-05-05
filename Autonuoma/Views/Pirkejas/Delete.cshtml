@@ -26,8 +26,8 @@
 		<legend class="confirm-msg">Ar tikrai norite šalinti šį pirkėją?</legend>
 
 		<dl>
-			<dt>@Html.DisplayNameFor(m => m.ID)</dt>
-			<dd>@Html.DisplayFor(m => m.ID)</dd>
+			<dt>@Html.DisplayNameFor(m => m.Id)</dt>
+			<dd>@Html.DisplayFor(m => m.Id)</dd>
 
 			<dt>@Html.DisplayNameFor(m => m.Vardas)</dt>
 			<dd>@Html.DisplayFor(m => m.Vardas)</dd>
@@ -35,17 +35,20 @@
 			<dt>@Html.DisplayNameFor(m => m.Pavarde)</dt>
 			<dd>@Html.DisplayFor(m => m.Pavarde)</dd>
 
-			<dt>@Html.DisplayNameFor(m => m.Telefonas)</dt>
-			<dd>@Html.DisplayFor(m => m.Telefonas)</dd>
+			<dt>@Html.DisplayNameFor(m => m.Telefono_numeris)</dt>
+			<dd>@Html.DisplayFor(m => m.Telefono_numeris)</dd>
 
-			<dt>@Html.DisplayNameFor(m => m.Epastas)</dt>
-			<dd>@Html.DisplayFor(m => m.Epastas)</dd>
+			<dt>@Html.DisplayNameFor(m => m.El_Pasto_Adresas)</dt>
+			<dd>@Html.DisplayFor(m => m.El_Pasto_Adresas)</dd>
 
 			<dt>@Html.DisplayNameFor(m => m.Miestas)</dt>
 			<dd>@Html.DisplayFor(m => m.Miestas)</dd>
 
 			<dt>@Html.DisplayNameFor(m => m.Adresas)</dt>
 			<dd>@Html.DisplayFor(m => m.Adresas)</dd>
+
+			<dt>@Html.DisplayNameFor(m => m.Pasto_Kodas)</dt>
+			<dd>@Html.DisplayFor(m => m.Pasto_Kodas)</dd>
 		</dl>
 
 		@if( ViewData["deletionNotPermitted"] != null )
@@ -59,7 +62,7 @@
 		{
 			<div class="buttons">
 				<button
-					formaction="@Url.Action("DeleteConfirm", new {id = Model.ID})"
+					formaction="@Url.Action("DeleteConfirm", new {id = Model.Id})"
 					class="btn btn-danger"
 					style="white-space: nowrap;"
 				><i class="fa-solid fa-trash"></i> Šalinti</button>

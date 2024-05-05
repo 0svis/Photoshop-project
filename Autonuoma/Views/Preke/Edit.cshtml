@@ -32,6 +32,12 @@
 		</div>
 
 		<div class="form-group">
+			@Html.LabelFor(m => m.Preke.Tipas)
+			@Html.EditorFor(m => m.Preke.Tipas)
+			@Html.ValidationMessageFor(m => m.Preke.Tipas, "")
+		</div>
+
+		<div class="form-group">
 			@Html.LabelFor(m => m.Preke.Pavadinimas)
 			@Html.EditorFor(m => m.Preke.Pavadinimas)
 			@Html.ValidationMessageFor(m => m.Preke.Pavadinimas, "")

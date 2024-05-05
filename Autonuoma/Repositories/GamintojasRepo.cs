@@ -21,8 +21,6 @@ public class GamintojasRepo
 				t.Pavadinimas = dre.From<string>("Pavadinimas");
 				t.Salis = dre.From<string>("Salis");
 				t.Adresas = dre.From<string>("Adresas");
-				t.Pasto_kodas = dre.From<string>("Pasto Kodas");
-				t.El_pasto_adresas = dre.From<string>("El. pasto adresas");
 				t.Id = dre.From<int>("id_Gamintojas");
 			});
 		return result;

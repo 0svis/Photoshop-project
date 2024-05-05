@@ -23,16 +23,19 @@
 					@Html.DisplayNameFor(model => model.Pavarde)
 				</th>
 				<th>
-					@Html.DisplayNameFor(model => model.Telefonas)
+					@Html.DisplayNameFor(model => model.Telefono_numeris)
 				</th>
 				<th>
-					@Html.DisplayNameFor(model => model.Epastas)
+					@Html.DisplayNameFor(model => model.El_Pasto_Adresas)
 				</th>
 				<th>
 					@Html.DisplayNameFor(model => model.Miestas)
 				</th>
 				<th>
 					@Html.DisplayNameFor(model => model.Adresas)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Pasto_Kodas)
 				</th>
 				<th></th>
 			</tr>
@@ -47,10 +50,10 @@
 					@Html.DisplayFor(model => item.Pavarde)
 				</td>
 				<td>
-					@Html.DisplayFor(model => item.Telefonas)
+					@Html.DisplayFor(model => item.Telefono_numeris)
 				</td>
 				<td>
-					@Html.DisplayFor(model => item.Epastas)
+					@Html.DisplayFor(model => item.El_Pasto_Adresas)
 				</td>
 				<td>
 					@Html.DisplayFor(model => item.Miestas)
@@ -59,8 +62,11 @@
 					@Html.DisplayFor(model => item.Adresas)
 				</td>
 				<td>
-					<a href="@Url.Action("Edit", new { id = item.ID })" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Redaguoti</a>
-					<a href="@Url.Action("Delete", new { id = item.ID })" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Šalinti</a>
+					@Html.DisplayFor(model => item.Pasto_Kodas)
+				</td>
+				<td>
+					<a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Redaguoti</a>
+					<a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Šalinti</a>
 				</td>
 			</tr>
 			}

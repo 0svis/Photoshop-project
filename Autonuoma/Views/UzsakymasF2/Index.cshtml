@@ -17,7 +17,7 @@
 		<thead>
 			<tr>
 				<th>
-					@Html.DisplayNameFor(m => m.ID)
+					@Html.DisplayNameFor(m => m.Id)
 				</th>
 				<th>
 					@Html.DisplayNameFor(m => m.Data)
@@ -29,7 +29,7 @@
 					@Html.DisplayNameFor(m => m.Pirkejas)
 				</th>
 				<th>
-					@Html.DisplayNameFor(m => m.Darbuotojas)
+					@Html.DisplayNameFor(m => m.darbutojas)
 				</th>
 				<th></th>
 			</tr>
@@ -38,7 +38,7 @@
 			@foreach (var item in Model) {
 			<tr>
 				<td>
-					@Html.DisplayFor(m => item.ID)
+					@Html.DisplayFor(m => item.Id)
 				</td>
 				<td>
 					@Html.DisplayFor(m => item.Data)
@@ -50,16 +50,16 @@
 					@Html.DisplayFor(m => item.Pirkejas)
 				</td>
 				<td>
-					@Html.DisplayFor(m => item.Darbuotojas)
+					@Html.DisplayFor(m => item.darbutojas)
 				</td>
 				<td>
 					<a 
-						href="@Url.Action("Edit", new { id = item.ID })" 
+						href="@Url.Action("Edit", new { id = item.Id })" 
 						class="btn btn-primary"
 						><i class="fa-solid fa-pen-to-square"></i> Redaguoti</a>
 						
 					<a 
-						href="@Url.Action("Delete", new { id = item.ID })" 
+						href="@Url.Action("Delete", new { id = item.Id })" 
 						class="btn btn-danger"
 						><i class="fa-solid fa-trash"></i> Šalinti</a>					
 				</td>

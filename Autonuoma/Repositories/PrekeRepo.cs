@@ -15,7 +15,7 @@ public class PrekeRepo
 		var query =
 			$@"SELECT
 				pr.Prekes_ID,
-				pr.Tipas
+				pr.Tipas,
 				pr.Pavadinimas,
 				pr.Kaina,
 				pr.Ivertinimas,

@@ -119,6 +119,7 @@ public class PirkejasRepo
 			args.Add("?El_pasto_adresas", pirkejas.El_Pasto_Adresas);
 			args.Add("?Miestas", pirkejas.Miestas);
 			args.Add("?Adresas", pirkejas.Adresas);
+			args.Add("?Pasto_Kodas", pirkejas.Pasto_Kodas);
 		});
 	}
 

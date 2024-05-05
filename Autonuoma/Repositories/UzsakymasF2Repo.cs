@@ -18,9 +18,9 @@ public class UzsakymasF2Repo
 			$@"SELECT
 				s.Uzsakymo_ID,
 				s.Kaina as Kaina,
-				s.Data as Data,
+				s.DATA as DATA,
 				CONCAT(n.Vardas,' ', n.Pavarde) as pirkejas,
-				CONCAT(d.Vardas,' ',d.Pavarde) as darbutojas,
+				CONCAT(d.Vardas,' ',d.Pavarde) as darbutojas
 			FROM
 				`uzsakymas` s
 				LEFT JOIN `pirkejas` n ON s.fk_PirkejasPirkejo_ID=n.Pirkejo_ID
@@ -71,14 +71,14 @@ public class UzsakymasF2Repo
 			$@"INSERT INTO `uzsakymas`
 			(
 				Kaina,
-				Data,
-				fk_PirkejasPirkejo_ID
+				DATA,
+				fk_PirkejasPirkejo_ID,
 				fk_DarbutojasDarbuotojo_ID
 			)
 			VALUES(
 				?Kaina,
-				?Data,
-				?fk_PirkejasPirkejo_ID
+				?DATA,
+				?fk_PirkejasPirkejo_ID,
 				?fk_DarbutojasDarbuotojo_ID
 			)";
 
@@ -89,9 +89,9 @@ public class UzsakymasF2Repo
 
 				//
 				args.Add("?Kaina", uzs.Kaina);
-				args.Add("?Data", uzs.Data);
+				args.Add("?DATA", uzs.Data);
 				args.Add("?fk_PirkejasPirkejo_ID", uzs.FkPirkejas);
-				args.Add("?fk_DarbutojasDarbuotojoo_ID", uzs.FkDarbutojas);
+				args.Add("?fk_DarbutojasDarbuotojo_ID", uzs.FkDarbutojas);
 			});
 
 		return (int)ID;
@@ -135,7 +135,7 @@ public class UzsakymasF2Repo
 			$@"SELECT prek.Kaina AS Kaina,
 			prek.Pavadinimas AS Pavadinimas,
 			prek.Prekes_ID AS PrekesID,
-			uzs.Kiekis AS Kiekis,
+			uzs.Kiekis AS Kiekis
 			FROM `uzsakyta_Preke` uzs
 			LEFT JOIN `preke` prek ON prek.Prekes_ID=uzs.fk_PrekePrekes_ID
 			WHERE fk_UzsakymasUzsakymo_ID = ?UzsakymasID
@@ -162,7 +162,7 @@ public class UzsakymasF2Repo
 	{
 		//
 		var query =
-			$@"INSERT INTO `uzsakytos_Preke`
+			$@"INSERT INTO `uzsakyta_Preke`
 				(
 					fk_UzsakymasUzsakymo_ID,
 					fk_PrekePrekes_ID,
