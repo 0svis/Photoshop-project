@@ -24,7 +24,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	@* ViewData["title"] gets set in view templates *@
-	<title>Autonuoma - @ViewData["title"]</title>
+	<title>FotoPrekyba - @ViewData["title"]</title>
 
 	<!-- this contains core scripts and styles and is built by webpack -->
 	<script src="@Url.Content("~/deps/dist/main.js")"></script>
@@ -43,10 +43,10 @@
 <body>
 	<div class="page-container">
 		@* page header, also main menu *@
-		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-black">
 			<div class="container-fluid">
 				@* home button *@
-				<a class="navbar-brand" href="@Url.Action("Index", "Home")" class="navbar-brand"><i class="fa-solid fa-car"></i></a>
+				<a class="navbar-brand" href="@Url.Action("Index", "Home")" class="navbar-brand"><i class="fa-solid fa-camera"></i></a>
 
 				@* this buttons shows drop down menu on narrow screens; it is invisible normally *@
 				<button
@@ -83,7 +83,7 @@
 							</li>
 						</ul>
 
-						@* drop-down menu for report links *@
+					@* drop-down menu for report links *@
 						<ul class="navbar-nav justify-content-right mb-2 mb-lg-0">
 							<li class="nav-item dropdown">
 								<a
@@ -120,7 +120,7 @@
 		@* page footer *@
 		<div class="page-footer">
 			<footer>
-				<p>&copy; KTU Informatikos Inžinerijos studentas Osvaldas Žilinskas</p>
+				<p>&copy; KTU Informacijos Sistemų Katedra, KTU Informatikos Inžinerijos studentas Osvaldas Žilinskas, IFIN-2/3, 2024</p>
 			</footer>
 		</div>
 	</div>
